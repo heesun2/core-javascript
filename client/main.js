@@ -1,13 +1,11 @@
+// const params = {
+//     host:'localhost',
+//     port:3000,
+//     open:false,
+//     root:'./client'
+// }
+
+// server.start(params);
 
 
-const a = 10;
-console.log(a);
-
-
-console.log('안녕 자바스크립트!');
-
-
-
-
-
-
+console.log(global)
