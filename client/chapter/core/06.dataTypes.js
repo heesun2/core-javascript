@@ -75,8 +75,8 @@ const user = {
         console.log('hello2~~');
     },
 
-    sayHi(){
-        console.log('hello3~~');
+    sayHi3(){
+        console.log('hello3~~'); //제일 많이 사용하는 코드
     }
 }
 
