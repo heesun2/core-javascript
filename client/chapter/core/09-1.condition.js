@@ -67,9 +67,3 @@ let goingToWatchMovie = 'yes';
 
 // 멀티 조건부 연산자 식
 
-function render(node,isActive){
-    const template = /*html*/
-        <div> ${isActive ? '안녕!' : '잘가!' } </div>
-    
-        node.insertAdjacentHTML('beforeend',template);
-}
