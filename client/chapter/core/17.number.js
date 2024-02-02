@@ -12,6 +12,7 @@ riches = 100_000_000;
 
 // 숫자 옆에 `e`를 붙여 0의 갯수를 설정할 수 있습니다.
 riches = 1e8;
+// console.log( riches );
 
 
 // 그렇다면 아래 작성된 숫자 값은 얼마일까요?
@@ -20,7 +21,6 @@ riches = 1.45e6; // → 1.45 * 10 ** 6
 
 // 작은 수도 `e`를 사용해 표현할 수 있습니다.
 riches = 1e-6; // → 1 / 10 ** 6
-// -를 하게 되면 앞에 붙는다
 
 
 /* 어림수 ---------------------------------------------------------------- */
@@ -29,36 +29,67 @@ let number = 90_127.53100032;
 
 // 내림
 let floor = Math.floor(number);
-console.log('floor:',floor)
+console.log('floor : ',floor)
 
 // 반올림
 let round = Math.round(number);
-console.log('round:',round)
+console.log('round : ',round)
 
 // 올림
-let ceil = Aath.ceil(number);
-console.log('ceil:',ceil)
+let ceil = Math.ceil(number);
+console.log('ceil : ',ceil)
 
 // 절삭(소수점 이하)
-let truncate = Math.round(number);
-console.log('truncate:',truncate)
+let truncate = Math.trunc(number);
+console.log('truncate : ',truncate)
 
 // 난수
-let random = Math.random(); // 0 ~ 0.9999999999까지
-console.log('random:',random)
+let random = Math.random(); // 0 ~ 0.9999999999999
+console.log('random : ',random)
 
 // 여러 수 중, 최댓값
 let max = Math.max(10,5,100,90,1000);
-console.log('max:',max)
+console.log('max : ',max)
+
 
 // 여러 수 중, 최솟값
-let min;
+let min = Math.min(10,5,100,-10,50);
+console.log('min : ',min)
 
 // 거듭제곱
-let pow;
+let pow = Math.pow(2,53);
+console.log('pow : ',pow)
+
+
+
+
+// let count = 0;
+
+// setInterval(()=>{
+//   document.querySelector('.first').style.transform = `translate(${Math.sin(++count) * 10 }px, ${(++count) * 5}px) rotate(${++count}deg)`
+// },100)
+
 
 // 최소, 최대 값 사이 난수 반환 함수
-let getRandomMinMax;
+
+
+
+// JSDoc
+/**
+ * 2개의 인수를 받으며 가장 작은 수를 최솟값으로 인식합니다. 최솟값과 최댓값의 랜덤한 수를 반환합니다.
+ * @param {number} min 
+ * @param {number} max 
+ * @returns number
+ */
+let getRandomMinMax = (min,max)=>{
+
+  if(min > max) throw new Error('최솟값은 최댓값보다 작아야 합니다.');
+  
+  return Math.round(Math.random() * (max-min) + min)
+};
+
+
+getRandomMinMax(3,5)
 
 
 /* 진법 ------------------------------------------------------------------ */
