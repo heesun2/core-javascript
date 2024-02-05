@@ -12,3 +12,7 @@ h1{
 .first{
     background-color: orange;
 }
+
+#idField.is-active{
+    background:red;
+}
