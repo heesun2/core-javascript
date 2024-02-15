@@ -2,10 +2,12 @@
 
 import { attr } from "../dom/attr.js";
 import { getNode } from '../dom/getNode.js'
+import { memo } from '../utils/memo.js'
 
 const cube = getNode('#cube');
 
-
+memo('cube',()=> getNode('#cube'))
+console.log(memo('cube'));
 
 let random;
 gsap.to(cube,{duration:1,rotationX:100,rotationY:-100,ease:'back(10)'});

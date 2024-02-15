@@ -66,21 +66,3 @@ export function toggleClass(node,className){
   if(typeof className !== 'string') throw new TypeError('toggleClass 함수의 두 번째 인수는 문자 타입 이어야 합니다.');
   return node.classList.toggle(className)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

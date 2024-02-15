@@ -15,4 +15,3 @@ export function clearContents(node){
 
 
 // export default clearContents
-
